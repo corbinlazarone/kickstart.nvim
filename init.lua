@@ -471,6 +471,10 @@ require('lazy').setup({
           --  Useful when your language has ways of declaring types without an actual implementation.
           map('gri', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
 
+          -- Move current line up or down
+          vim.keymap.set('n', '<C-j>', ':m .+1<CR>==', { silent = true })
+          vim.keymap.set('n', '<-k>', ':m .-2<CR>==', { silent = true })
+
           -- Jump to the definition of the word under your cursor.
           --  This is where a variable was first declared, or where a function is defined, etc.
           --  To jump back, press <C-t>.
