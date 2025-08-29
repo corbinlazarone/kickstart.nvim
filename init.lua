@@ -69,6 +69,13 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
 
+-- Indentation settings
+vim.o.tabstop = 2 -- Number of spaces a tab counts for
+vim.o.shiftwidth = 2 -- Number of spaces for each indentation level
+vim.o.expandtab = true -- Convert tabs to spaces
+vim.o.smartindent = true -- Smart indentation
+vim.o.autoindent = true -- Copy indent from current line
+
 -- Show which line your cursor is on
 vim.o.cursorline = true
 
