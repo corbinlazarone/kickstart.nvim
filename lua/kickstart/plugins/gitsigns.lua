@@ -6,6 +6,64 @@ return {
   {
     'lewis6991/gitsigns.nvim',
     opts = {
+      signs = {
+        add = {
+          -- text = '▎', -- Custom symbol for added lines
+          -- Alternative options:
+          -- text = '│', -- Thin vertical line
+          text = '█', -- Full block
+          -- text = '┃', -- Double line
+          -- text = '▌', -- Left half block
+          -- text = '●', -- Bullet point
+        },
+        change = {
+          text = '▎', -- Custom symbol for modified lines
+          -- Alternative options:
+          -- text = '▮', -- Vertical rectangle
+          -- text = '◆', -- Diamond
+          -- text = '◉', -- Circle with dot
+        },
+        delete = {
+          text = '▸', -- Custom symbol for deleted lines
+          -- Alternative options:
+          -- text = '▶', -- Right arrow
+          -- text = '◢', -- Lower right triangle
+          -- text = '_', -- Underscore (default)
+          -- text = '‾', -- Overline
+        },
+        topdelete = {
+          text = '▾', -- Custom symbol for deleted at top
+          -- Alternative options:
+          -- text = '▼', -- Down arrow
+          -- text = '‾', -- Overline
+        },
+        changedelete = {
+          text = '▎', -- Custom symbol for lines that were changed and deleted
+          -- Alternative options:
+          -- text = '▮', -- Vertical rectangle
+          -- text = '~', -- Tilde (default)
+        },
+        untracked = {
+          text = '┆', -- Custom symbol for untracked files
+          -- Alternative options:
+          -- text = '┊', -- Dotted line
+          -- text = '▎', -- Same as add
+          -- text = '?', -- Question mark
+        },
+      },
+
+      -- You can also customize sign highlighting
+      signs_staged = {
+        add = { text = '▎' },
+        change = { text = '▎' },
+        delete = { text = '▸' },
+        topdelete = { text = '▾' },
+        changedelete = { text = '▎' },
+      },
+
+      -- Customize sign highlight groups (colors)
+      -- These reference your colorscheme's highlight groups
+      sign_priority = 6, -- Priority of signs (higher = more important)
       on_attach = function(bufnr)
         local gitsigns = require 'gitsigns'
 
