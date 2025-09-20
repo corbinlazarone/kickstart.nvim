@@ -7,10 +7,10 @@ return {
     priority = 1000, -- Optional: Ensures colorschemes load early
     config = function()
       require('catppuccin').setup {
-        flavour = 'macchiato',
+        flavour = 'frappe',
         float = {
-          transparent = true, -- enable transparent floating windows
-          solid = false, -- use solid styling for floating windows, see |winborder|
+          transparent = false, -- enable transparent floating windows
+          solid = true, -- use solid styling for floating windows, see |winborder|
         },
         transparent_background = true,
         auto_integrations = true,
