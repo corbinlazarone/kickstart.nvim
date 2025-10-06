@@ -2,6 +2,7 @@ return {
   'sphamba/smear-cursor.nvim',
 
   opts = {
+    enabled = true,
     -- Smear cursor when switching buffers or windows.
     smear_between_buffers = true,
 
@@ -19,5 +20,9 @@ return {
     -- Smear cursor in insert mode.
     -- See also `vertical_bar_cursor_insert_mode` and `distance_stop_animating_vertical_bar`.
     smear_insert_mode = true,
+
+    stiffness = 0.9,
+    trailing_stifness = 0.8,
+    distance_stop_animating = 0.3,
   },
 }
