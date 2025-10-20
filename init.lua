@@ -630,6 +630,7 @@ require('lazy').setup({
             provideFormatter = true,
           },
         },
+        jsonls = {},
         gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
