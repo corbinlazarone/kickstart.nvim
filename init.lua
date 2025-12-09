@@ -9,6 +9,8 @@ vim.g.have_nerd_font = true
 
 vim.g.lazyvim_check_order = false
 
+vim.opt.relativenumber = true
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
