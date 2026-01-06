@@ -71,11 +71,11 @@ vim.o.splitbelow = true
 vim.o.inccommand = 'split'
 
 -- Indentation settings
-vim.o.tabstop = 2 -- Number of spaces a tab counts for
-vim.o.shiftwidth = 2 -- Number of spaces for each indentation level
-vim.o.expandtab = true -- Convert tabs to spaces
+vim.o.tabstop = 2        -- Number of spaces a tab counts for
+vim.o.shiftwidth = 2     -- Number of spaces for each indentation level
+vim.o.expandtab = true   -- Convert tabs to spaces
 vim.o.smartindent = true -- Smart indentation
-vim.o.autoindent = true -- Copy indent from current line
+vim.o.autoindent = true  -- Copy indent from current line
 
 -- Show which line your cursor is on
 vim.o.cursorline = true
@@ -239,7 +239,7 @@ require('lazy').setup({
   -- Then, because we use the `opts` key (recommended), the configuration runs
   -- after the plugin has been loaded as `require(MODULE).setup(opts)`.
 
-  { -- Useful plugin to show you pending keybinds.
+  {                     -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     opts = {
@@ -320,7 +320,7 @@ require('lazy').setup({
       { 'nvim-telescope/telescope-ui-select.nvim' },
 
       -- Useful for getting pretty icons, but requires a Nerd Font.
-      { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+      { 'nvim-tree/nvim-web-devicons',            enabled = vim.g.have_nerd_font },
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -428,7 +428,7 @@ require('lazy').setup({
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP.
-      { 'j-hui/fidget.nvim', opts = {} },
+      { 'j-hui/fidget.nvim',    opts = {} },
 
       -- Allows extra capabilities provided by blink.cmp
       'saghen/blink.cmp',
@@ -490,10 +490,6 @@ require('lazy').setup({
           -- Jump to the implementation of the word under your cursor.
           --  Useful when your language has ways of declaring types without an actual implementation.
           map('gri', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-
-          -- Move current line up or down
-          vim.keymap.set('n', '<C-j>', ':m .+1<CR>==', { silent = true })
-          vim.keymap.set('n', '<C-k>', ':m .-2<CR>==', { silent = true })
 
           -- Jump to the definition of the word under your cursor.
           --  This is where a variable was first declared, or where a function is defined, etc.
@@ -674,8 +670,8 @@ require('lazy').setup({
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
-        'stylua', -- Used to format Lua code
-        'prettier', -- Used to framt javascript/typescript code
+        'stylua',    -- Used to format Lua code
+        'prettier',  -- Used to framt javascript/typescript code
         'prettierd', --  Used to framt javascript/typescript code
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
